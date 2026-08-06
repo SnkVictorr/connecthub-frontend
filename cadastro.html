@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Cadastro</title>
+  </head>
+  <body class="login-body">
+    <div class="login-card">
+      <h1>Cadastrar</h1>
+      <p>Crie sua conta para continuar</p>
+      <form id="cadastro-form">
+        <label for="nome">Nome</label>
+        <input
+          minlength="3"
+          maxlength="100"
+          type="text"
+          id="nome"
+          placeholder="Seu nome"
+          required
+        />
+
+        <label for="email">E-mail</label>
+        <input
+          minlength="5"
+          maxlength="50"
+          type="email"
+          id="email"
+          placeholder="seu@email.com"
+          required
+        />
+
+        <label for="senha">Senha</label>
+        <input
+          minlength="6"
+          maxlength="20"
+          type="password"
+          id="senha"
+          placeholder="••••••••"
+          required
+        />
+
+        <button type="submit">Cadastrar</button>
+      </form>
+      <a href="index.html" class="footer-text">Já tem conta? Faça login</a>
+    </div>
+    <script src="assets/js/cadastro.js"></script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>EasyDesk</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="logo">EasyDesk</h1>
+      <div class="user-info">
+        <span class="user-name" id="user-name"></span>
+        <a href="#" id="logout-button" class="logout-button">Sair</a>
+      </div>
+    </header>
+    <main>
+      <section class="chamado-section">
+        <h2 class="title">Abrir Chamado</h2>
+        <form id="chamados-form" class="chamado-form">
+          <!-- <label for="solicitante">Solicitante:</label>
+          <input
+            placeholder="Ex.: João da Silva"
+            class="chamado-input"
+            type="text"
+            id="solicitante"
+            name="solicitante"
+            required
+            minlength="3"
+            maxlength="50"
+          /> -->
+
+          <label for="prioridade">Prioridade:</label>
+          <select
+            class="chamado-input"
+            id="prioridade"
+            name="prioridade"
+            required
+          >
+            <option value="">Selecione a prioridade</option>
+            <option value="baixa">Baixa</option>
+            <option value="media">Média</option>
+            <option value="alta">Alta</option>
+          </select>
+          <label for="titulo">Título:</label>
+          <input
+            placeholder="Ex.: Impressora não liga"
+            class="chamado-input"
+            type="text"
+            id="titulo"
+            name="titulo"
+            required
+            minlength="5"
+            maxlength="100"
+          />
+          <label for="descricao">Descrição:</label>
+          <textarea
+            placeholder="Ex.: Descreva o problema com detalhes."
+            class="chamado-input"
+            id="descricao"
+            rows="4"
+            name="descricao"
+            maxlength="400"
+            required
+            minlength="10"
+            maxlength="400"
+          ></textarea>
+
+          <button class="button" type="submit">Abrir Chamado</button>
+        </form>
+      </section>
+
+      <section class="chamado-section">
+        <h2 class="title">Painel de Chamados</h2>
+
+        <nav
+          aria-label="Filtros por status e prioridade"
+          class="panel"
+          id="chamado-panel"
+        >
+          <h3 class="filter-title">Filtros</h3>
+
+          <input
+            type="text"
+            id="search-input"
+            class="search-input"
+            placeholder="Pesquisa por título..."
+          />
+          <ul class="filter-buttons">
+            <li>
+              <button id="todos" class="status-button">Todos</button>
+            </li>
+            <li>
+              <button id="pendente" class="status-button">Pendente</button>
+            </li>
+            <li>
+              <button id="em-andamento" class="status-button">
+                Em Progresso
+              </button>
+            </li>
+            <li>
+              <button id="concluido" class="status-button">Concluídos</button>
+            </li>
+          </ul>
+          <ul class="filter-buttons">
+            <li>
+              <button id="todas-prioridades" class="priority-button">
+                Todas Prioridades
+              </button>
+            </li>
+            <li>
+              <button id="baixa" class="priority-button">Baixa</button>
+            </li>
+            <li>
+              <button id="media" class="priority-button">Média</button>
+            </li>
+            <li><button id="alta" class="priority-button">Alta</button></li>
+          </ul>
+        </nav>
+        <div id="chamados" class="chamados-container">
+          <!-- <div class="chamado-card">
+            <h4 class="chamado-solicitante">João da Silva</h4>
+            <h3 class="chamado-card-title">Título do Chamado</h3>
+            <p class="chamado-card-description">
+              Descrição do chamado em detalhes.
+            </p>
+            <div class="chamado-status">
+              <span class="pendente">Pendente</span>
+              <span class="prioridade prioridade-alta">Alta</span>
+            </div>
+          </div> -->
+          <!-- <div class="chamado-card">
+              <h3 class="chamado-card-title">Outro Chamado</h3>
+              <p class="chamado-card-description">
+                Descrição do outro chamado em detalhes.
+              </p>
+              <div class="chamado-status">
+                <span class="progresso">Em Progresso</span>
+                <span class="prioridade prioridade-media">Média</span>
+              </div>
+            </div>
+            <div class="chamado-card">
+              <h3 class="chamado-card-title">Outro Chamado</h3>
+              <p class="chamado-card-description">
+                Descrição do outro chamado em detalhes.
+              </p>
+              <div class="chamado-status">
+                <span class="concluido">Concluído</span>
+                <span class="prioridade prioridade-baixa">Baixa</span>
+              </div>
+            </div> -->
+        </div>
+      </section>
+    </main>
+    <script type="module" src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/logout.js"></script>
+  </body>
+</html>
