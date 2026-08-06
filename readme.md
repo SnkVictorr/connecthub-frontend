@@ -61,14 +61,13 @@ O ConnectHub é o hub central projetado para superar as limitações de aplicaç
    DATABASE_PASSWORD=root
    DATABASE_NAME=connecthub
    DATABASE_PORT=3306
+   JWT_SECRET=CHAVESECRETA
+   JWT_EXPIRES_IN=EXPIRACAO
+   JWT_REFRESH_SECRET=OUTRACHAVESECRETA
+   JWT_REFRESH_EXPIRES_IN=EXPIRACAO
+   FRONTEND_URL=URL
+   SECURE=TRUE OU FALSE
    ```
-
-  JWT_SECRET
-  JWT_EXPIRES_IN
-  JWT_REFRESH_SECRET
-  JWT_REFRESH_EXPIRES_IN
-  FRONTEND_URL
-  SECURE
 
 ````
 
@@ -80,7 +79,6 @@ npm run dev
 frontend:
 iniciar com a extensão live server
 ````
-
 
 ## 🌍 Links do Projeto (Deploy)
 
